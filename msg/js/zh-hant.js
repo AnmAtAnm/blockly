@@ -291,7 +291,7 @@ goog.require('Blockly.Msg');
 /** @export */ Blockly.Msg.ORDINAL_NUMBER_SUFFIX = "";  // untranslated
 /** @export */ Blockly.Msg.PROCEDURES_ALLOW_STATEMENTS = "允許陳述式";
 /** @export */ Blockly.Msg.PROCEDURES_BEFORE_PARAMS = "與：";
-/** @export */ Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL = "https://zh.wikipedia.org/wiki/%E5%AD%90%E7%A8%8B%E5%BA%8F";
+/** @export */ Blockly.Msg.PROCEDURES_CALLNORETURN_HELPURL = "https://zh.wikipedia.org/wiki/子程式";
 /** @export */ Blockly.Msg.PROCEDURES_CALLNORETURN_TOOLTIP = "執行使用者定義的函式「%1」。";
 /** @export */ Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL = "https://zh.wikipedia.org/wiki/%E5%AD%90%E7%A8%8B%E5%BA%8F";
 /** @export */ Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP = "執行使用者定義的函式「%1」，並使用它的回傳值。";
