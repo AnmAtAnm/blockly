@@ -1,0 +1,2 @@
+Executing compile.sh from /Users/marshalla/Projects/Blockly/web
+tests/compile/compile.sh: line 105: syntax error: unexpected end of file
