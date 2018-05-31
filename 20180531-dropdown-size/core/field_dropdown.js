@@ -67,7 +67,6 @@ Blockly.FieldDropdown = function(menuGenerator, opt_validator) {
 };
 goog.inherits(Blockly.FieldDropdown, Blockly.Field);
 
-
 /**
  * Construct a FieldDropdown from a JSON arg object.
  * @param {!Object} options A JSON object with options (options).
@@ -258,12 +257,10 @@ Blockly.FieldDropdown.prototype.positionMenu_ = function(menu) {
   this.createWidget_(menu);
   var menuSize = Blockly.utils.uiMenu.getSize(menu);
 
-  console.log('document.documentElement.clientHeight =', document.documentElement.clientHeight);
-  var maxHeightVh = Blockly.FieldDropdown.MAX_MENU_HEIGHT_VH
-      * document.documentElement.clientHeight;
-  console.log('maxHeightVh = ', maxHeightVh);
-  if (menuSize.height > maxHeightVh) {
-    menuSize.height = maxHeightVh;
+  var menuMaxHeightPx =
+      Blockly.FieldDropdown.MAX_MENU_HEIGHT_VH * window.innerHeight;
+  if (menuSize.height > menuMaxHeightPx) {
+    menuSize.height = menuMaxHeightPx;
   }
 
   if (this.sourceBlock_.RTL) {
