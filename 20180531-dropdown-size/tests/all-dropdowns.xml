@@ -1,0 +1,187 @@
+<xml id="all-dropdowns" style="display: none">
+  <variables>
+    <variable type="">x</variable>
+    <variable type="">{textVariable}</variable>
+    <variable type="">item</variable>
+    <variable type="">text</variable>
+    <variable type="">list</variable>
+  </variables>
+  <block type="logic_compare" x="313" y="38">
+    <field name="OP">EQ</field>
+  </block>
+  <block type="text_append" x="513" y="38">
+    <field name="VAR" variabletype="">item</field>
+    <value name="TEXT">
+      <shadow type="text">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+  <block type="logic_operation" x="313" y="88">
+    <field name="OP">AND</field>
+  </block>
+  <block type="text_indexOf" x="512" y="88">
+    <field name="END">FIRST</field>
+    <value name="VALUE">
+      <block type="variables_get">
+        <field name="VAR" variabletype="">text</field>
+      </block>
+    </value>
+    <value name="FIND">
+      <shadow type="text">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="logic_boolean" x="313" y="138">
+    <field name="BOOL">TRUE</field>
+  </block>
+  <block type="text_charAt" x="512" y="138">
+    <mutation at="true"></mutation>
+    <field name="WHERE">FROM_START</field>
+    <value name="VALUE">
+      <block type="variables_get">
+        <field name="VAR" variabletype="">text</field>
+      </block>
+    </value>
+  </block>
+  <block type="math_arithmetic" x="313" y="188">
+    <field name="OP">ADD</field>
+    <value name="A">
+      <shadow type="math_number">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+    <value name="B">
+      <shadow type="math_number">
+        <field name="NUM">1</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_getSubstring" x="512" y="188">
+    <mutation at1="true" at2="true"></mutation>
+    <field name="WHERE1">FROM_START</field>
+    <field name="WHERE2">FROM_START</field>
+    <value name="STRING">
+      <block type="variables_get">
+        <field name="VAR" variabletype="">text</field>
+      </block>
+    </value>
+  </block>
+  <block type="math_single" x="313" y="238">
+    <field name="OP">ROOT</field>
+    <value name="NUM">
+      <shadow type="math_number">
+        <field name="NUM">9</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_changeCase" x="512" y="238">
+    <field name="CASE">UPPERCASE</field>
+    <value name="TEXT">
+      <shadow type="text">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="math_trig" x="313" y="288">
+    <field name="OP">SIN</field>
+    <value name="NUM">
+      <shadow type="math_number">
+        <field name="NUM">45</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_trim" x="512" y="288">
+    <field name="MODE">BOTH</field>
+    <value name="TEXT">
+      <shadow type="text">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="math_constant" x="313" y="338">
+    <field name="CONSTANT">PI</field>
+  </block>
+  <block type="text_prompt_ext" x="512" y="338">
+    <mutation type="TEXT"></mutation>
+    <field name="TYPE">TEXT</field>
+    <value name="TEXT">
+      <shadow type="text">
+        <field name="TEXT">abc</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="math_number_property" x="312" y="388">
+    <mutation divisor_input="false"></mutation>
+    <field name="PROPERTY">EVEN</field>
+    <value name="NUMBER_TO_CHECK">
+      <shadow type="math_number">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="lists_indexOf" x="512" y="388">
+    <field name="END">FIRST</field>
+    <value name="VALUE">
+      <block type="variables_get">
+        <field name="VAR" variabletype="">list</field>
+      </block>
+    </value>
+  </block>
+  <block type="math_round" x="312" y="438">
+    <field name="OP">ROUND</field>
+    <value name="NUM">
+      <shadow type="math_number">
+        <field name="NUM">3.1</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="lists_getIndex" x="512" y="438">
+    <mutation statement="false" at="true"></mutation>
+    <field name="MODE">GET</field>
+    <field name="WHERE">FROM_START</field>
+    <value name="VALUE">
+      <block type="variables_get">
+        <field name="VAR" variabletype="">list</field>
+      </block>
+    </value>
+  </block>
+  <block type="math_on_list" x="312" y="488">
+    <mutation op="SUM"></mutation>
+    <field name="OP">SUM</field>
+  </block>
+  <block type="lists_setIndex" x="512" y="488">
+    <mutation at="true"></mutation>
+    <field name="MODE">SET</field>
+    <field name="WHERE">FROM_START</field>
+    <value name="LIST">
+      <block type="variables_get">
+        <field name="VAR" variabletype="">list</field>
+      </block>
+    </value>
+  </block>
+  <block type="lists_getSublist" x="512" y="538">
+    <mutation at1="true" at2="true"></mutation>
+    <field name="WHERE1">FROM_START</field>
+    <field name="WHERE2">FROM_START</field>
+    <value name="LIST">
+      <block type="variables_get">
+        <field name="VAR" variabletype="">list</field>
+      </block>
+    </value>
+  </block>
+  <block type="lists_split" x="512" y="588">
+    <mutation mode="SPLIT"></mutation>
+    <field name="MODE">SPLIT</field>
+    <value name="DELIM">
+      <shadow type="text">
+        <field name="TEXT">,</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="lists_sort" x="512" y="638">
+    <field name="TYPE">NUMERIC</field>
+    <field name="DIRECTION">1</field>
+  </block>
+</xml>
